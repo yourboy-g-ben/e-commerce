@@ -46,7 +46,7 @@ class ProductSalesSerializer(serializers.Serializer):
 
     
 class SaleSerializer(serializers.ModelSerializer):
-    products = ProductSaleSerializer(many=True)
+    products = ProductSalesSerializer(many=True)
     class Meta:
         model = Sale 
         fields = ["id", "total_amount", "buyer", "created_at", "products"]
